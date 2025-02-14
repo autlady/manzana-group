@@ -1,0 +1,54 @@
+/*========GAMBURGER======*/
+
+.burger {
+    display: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    flex-shrink: 0;
+    background-color: transparent;
+
+    @media (max-width: 1230px) {
+        display: flex;
+    }
+  }
+
+  .burger span {
+    position: relative;
+    height: 3px;
+    width: 27px;
+    background-color: var(--prime-color);
+    border-radius: 1px;
+  }
+
+  .burger span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    background-color: var(--prime-color);
+    right: 0;
+    border-radius: 1px;
+  }
+
+  .burger span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    right: 0;
+    background-color: var(--prime-color);
+    border-radius: 1px;
+  }
+
+  .burger span:after {
+    top: -9px;
+  }
+
+  .burger span:before {
+    bottom: -9px;
+  }
+
