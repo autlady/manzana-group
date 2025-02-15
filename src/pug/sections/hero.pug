@@ -1,10 +1,19 @@
 // HERO
 section.hero
     .container
-        h1.headline Помогаем спорту
-            span стать лучше
-        p Cистема управления спортивными клубами, сооружениями и взаимоотношениями с болельщиками
+        .hero__title
+            h1.headline Помогаем спорту
+                |
+                br
+                span стать лучше
+        p.hero__text Cистема управления спортивными клубами, сооружениями и взаимоотношениями с болельщиками
+        // discuss button
         .hero__discuss
             button.btn-discuss
-                img(src="./img/discuss-text.svg" alt="обсудить проект")
-                img(src="./img/discuss-arrow.svg" alt="обсудить проект").btn-discuss__arrow
+                img(src="./img/hero/discuss-text.svg" alt="discuss project").btn-discuss__text
+                img(src="./img/hero/discuss-arrow.svg" alt="discuss btn").btn-discuss__arrow
+        img(src="./img/hero/arrow.webp" srcset="./img/hero/arrow@2x.webp 2x" alt="arrow").hero__arrow
+        img(src="./img/hero/gates.webp" srcset="./img/hero/gates@2x.webp 2x" alt="gates").hero__gates
+        img(src="./img/hero/green-ball.webp" srcset="./img/hero/green-ball@2x.webp 2x" alt="ball").hero__ball
+        img(src="./img/hero/puck.webp" srcset="./img/hero/puck@2x.webp 2x" alt="puck").hero__puck
+

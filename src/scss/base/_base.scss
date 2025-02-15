@@ -136,46 +136,19 @@ select:-webkit-autofill:focus {
   padding: 0 15px;
 }
 
-
-.h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 36px;
+.headline {
+  font-size: clamp(35px, 20.7px + 3.58vw, 78px);
   font-weight: 700;
-  line-height: normal;
+  line-height: 0.9;
+  color: var(--accent-green);
+
+  @media (max-width: 767px) {
+    line-height: 1.1;
+  }
+
+  span {
+    color: var(--color-white);
+  }
 }
 
-.h2 {
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.h2:after {
-  content: attr(data-title);
-  text-transform: uppercase;
-  white-space: nowrap;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 82px;
-  color: rgba(0, 0, 0, 0.05);
-  z-index: -1;
-}
-
-.h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: normal;
-  text-align: end;
-}
 

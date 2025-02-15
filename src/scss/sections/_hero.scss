@@ -1,9 +1,40 @@
 .hero {
+    position: relative;
+    overflow: hidden;
     background-color: var(--prime-color);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 64px;
+        right: 0;
+        // transform: translateX(-25%);
+        width: 708px;
+        height: 708px;
+        z-index: 2;
+        background-image: url("../img/hero/ellipse.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.hero__title {
+    margin-bottom: clamp(10px, 4.7px + 1.33vw, 26px);
+}
+
+.hero__text {
+    max-width: 523px;
+    margin-bottom: 67px;
+    font-size: clamp(14px, 10.3px + 0.92vw, 25px);
+    font-weight: 700;
+    line-height: 1.32;
+    color: var(--color-white);
 }
 
 .hero__discuss {
     padding-left: 112px;
+    margin-bottom: 38px;
 
 }
 .btn-discuss {
@@ -34,7 +65,19 @@
         background-color: var(--accent-red);
         z-index: -1;
     }
+}
 
+.btn-discuss__text {
+    animation: rotation 10s linear 0s infinite running normal;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .btn-discuss__arrow {
@@ -42,4 +85,32 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.hero__gates {
+    position: absolute;
+    right: -80px;
+    top: -150px;
+    z-index: 2;
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.hero__ball {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hero__puck {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
 }
