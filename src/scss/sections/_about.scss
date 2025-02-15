@@ -1,0 +1,49 @@
+.about {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: var(--prime-color);
+}
+
+.about__title {
+    margin-bottom: 30px;
+    font-size: clamp(30px, 15px + 3.75vw, 75px);
+    line-height: 1.07;
+    font-weight: 500;
+    color: #fff;
+
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.about-card {
+    width: 32.5%;
+    min-height: 300px;
+    padding: 40px 15px 48px 30px;
+    border-radius: 20px;
+    background-color: #e8e9ee;
+}
+
+.about-card__img {
+    margin-bottom: 20px;
+}
+
+.about-card__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+    color: var(--color-white);
+
+    span {
+        font-weight: 700;
+        font-size: 25px;
+    }
+}
