@@ -1,21 +1,30 @@
-.svg-vk {
-    width: 25px;
+.svg-cdp {
+    width: 53px;
+    height: 52px;
+
+    @media (max-width: 767px) {
+        width: 42px;
+        height: 39px;
+    }
 }
 
-.svg-tg {
-    width: 22px;
+.svg-web {
+    width: 65px;
+    height: 67px;
+
+    @media (max-width: 767px) {
+        width: 42px;
+        height: 39px;
+    }
 }
 
-.svg-wa {
-    width: 20px;
-}
+.svg-marketing {
+    width: 78px;
+    height: 81px;
 
-.svg-vk, .svg-tg, .svg-wa {
-    height: 25px;
-    transition: .3s;
-
-    &:hover {
-        opacity: 0.75;
+    @media (max-width: 767px) {
+        width: 48px;
+        height: 46px;
     }
 }
 

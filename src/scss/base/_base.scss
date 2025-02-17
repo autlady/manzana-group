@@ -151,5 +151,16 @@ select:-webkit-autofill:focus {
   }
 }
 
+.section-title {
+  font-weight: 500;
+  font-size: clamp(30px, 16.7px + 3.33vw, 70px);
+  line-height: 1;
+  color: var(--color-white);
+
+  @media (max-width: 767px) {
+    line-height: 1.33;
+  }
+}
+
 
 

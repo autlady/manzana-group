@@ -1,0 +1,195 @@
+.services {
+    padding-bottom: 48px;
+    background-color: var(--prime-color);
+}
+
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 34px;
+
+    @media (max-width: 1250px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+.service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 294px;
+    padding: 38px 50px 46px 41px;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    transition: all .3s ease-in;
+    z-index: 1;
+
+    @media (max-width: 767px) {
+        padding: 17px 17px 23px 17px;
+        min-height: 180px;
+    }
+}
+
+.service-card:first-child::before {
+    position: absolute;
+    content: "";
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(146deg, #78be20 55%, #ffbf3f 100%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+.service-card:first-child:hover::before {
+    opacity: 1;
+}
+
+.service-card:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(145deg, #fe3f44 45%, #ffc701 100%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+.service-card:nth-child(2):hover::before {
+    opacity: 1;
+}
+
+.service-card:nth-child(2):hover {
+    .service-card__title,
+    .service-card__link {
+        color: var(--color-white);
+    }
+    .service-card__link::before {
+        background-color: var(--color-white);
+    }
+    .svg-web {
+        color: var(--color-white);
+    }
+}
+
+.service-card:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(137deg, #ffbf3f 55%, #ffbf3f 47.9%, #fe3f44 99.9%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+.service-card:nth-child(3):hover::before {
+    opacity: 1;
+}
+
+.fake-border {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    bottom: -1px;
+    right: 0;
+    border-top-left-radius: 12px;
+    background-color: black;
+    z-index: 2;
+
+    &::before, &::after {
+        content: "";
+        width: 28px; // угол + 8px
+        height: 28px; // угол + 8px
+        background-color: transparent;
+        position: absolute;
+        border-bottom-right-radius: 20px; // отталкиваемся от этого значения-берем угол из макета
+
+    }
+
+    &::before {
+        left: -27.7px; // отрицательное значение ширины
+        bottom: 1px;
+        box-shadow: 6px 12px var(--prime-color); // всегда такие цифры
+    }
+
+    &::after {
+        right: 0;
+        top: -28px; // отрицательное значение ширины
+        box-shadow: 6px 6px var(--prime-color); // всегда такие цифры
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.service-card__row {
+    display: flex;
+    column-gap: 39px;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.service-card__img {
+    flex-shrink: 0;
+}
+
+.service-card__title {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: clamp(19px, 15.3px + 0.92vw, 30px);
+    line-height: 1.33;
+    color: var(--prime-color);
+
+    @media (max-width: 767px) {
+        line-height: 1.26;
+    }
+}
+
+.service-card__link {
+    position: relative;
+    padding-left: 3px;
+    font-size: clamp(18px, 17.3px + 0.17vw, 20px);
+    line-height: 1.36;
+    color: var(--second-color);
+
+    @media (max-width: 767px) {
+        padding-left: 0px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: -13px;
+        right: 0;
+        left: 0;
+        height: 1px;
+        background-color: var(--second-color);
+        width: 120px;
+
+        @media (max-width: 767px) {
+            bottom: -7px;
+            width: 100px;
+        }
+    }
+}
