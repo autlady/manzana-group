@@ -1,0 +1,192 @@
+.portfolio {
+    padding-top: 50px;
+    padding-bottom: 85px;
+}
+
+.portfolio__title {
+    margin-bottom:  30px;
+
+    .section-title {
+        line-height: 1.43;
+    }
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    padding: 14px 18px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background: #0c50b5;
+    cursor: pointer;
+
+    .portfolio-card__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: var(--color-white);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+
+    }
+
+    .image-overlay:hover {
+        backdrop-filter: blur(12.199999809265137px);
+        background-color: rgba(255, 255, 255, 0.6);
+        opacity: 1;
+    }
+
+    .portfolio-card__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s ease-in;
+    }
+}
+
+.portfolio-card:hover {
+    .portfolio-card__btn {
+        z-index: 9;
+        pointer-events: all;
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.portfolio-wrapper {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.portfolio-box1 {
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.portfolio-box2 {
+    display: flex;
+    column-gap: 20px;
+}
+
+.portfolio-box3 {
+    display: flex;
+    column-gap: 20px;
+}
+
+.portfolio-col {
+    width: 66.3%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 30px;
+}
+
+.portfolio-row {
+    flex-grow: 1;
+    display: flex;
+    column-gap: 20px;
+}
+
+.portfolio-card1 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 766;
+    background-image: image-set(url("../img/portfolio/fakel.webp") 1x,
+    url("../img/portfolio/fakel@2x.webp") 2x);
+}
+
+.portfolio-card2 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/lokomotiv.webp") 1x,
+    url("../img/portfolio/lokomotiv@2x.webp") 2x);
+}
+
+.portfolio-card3 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/zenit.webp") 1x,
+    url("../img/portfolio/zenit@2x.webp") 2x);
+}
+
+.portfolio-card4 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/spartak.webp") 1x,
+    url("../img/portfolio/spartak@2x.webp") 2x);
+}
+
+.portfolio-card5 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/salavat-ulaev.webp") 1x,
+    url("../img/portfolio/salavat-ulaev@2x.webp") 2x);
+}
+
+.portfolio-card6 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/sochi.webp") 1x,
+    url("../img/portfolio/sochi@2x.webp") 2x);
+}
+
+.portfolio-card7 {
+    flex-grow: 1;
+    width: 66.3%;
+    aspect-ratio: 927 / 368;
+    background-image: image-set(url("../img/portfolio/fk-dinamo.webp") 1x,
+    url("../img/portfolio/fk-dinamo@2x.webp") 2x);
+}
+
+
+.portfolio-card8 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/barys.webp") 1x,
+    url("../img/portfolio/barys@2x.webp") 2x);
+}
+
+.portfolio-card9 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/vhl.webp") 1x,
+    url("../img/portfolio/vhl@2x.webp") 2x);
+}
+
+.portfolio-card10 {
+    flex-grow: 1;
+    width: 32%;
+    aspect-ratio: 453 / 368;
+    background-image: image-set(url("../img/portfolio/hk-dinamo.webp") 1x,
+    url("../img/portfolio/hk-dinamo@2x.webp") 2x);
+}
