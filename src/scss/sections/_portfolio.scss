@@ -1,13 +1,25 @@
 .portfolio {
     padding-top: 50px;
     padding-bottom: 85px;
+
+    @media (max-width: 525px) {
+        padding-block: 30px;
+    }
 }
 
 .portfolio__title {
-    margin-bottom:  30px;
+    margin-bottom: 30px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
 
     .section-title {
         line-height: 1.43;
+
+        @media (max-width: 767px) {
+            line-height: 1.33;
+        }
     }
 }
 
@@ -20,7 +32,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // background: #0c50b5;
     cursor: pointer;
 
     .portfolio-card__title {
@@ -73,10 +84,14 @@
 }
 
 .portfolio-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: clamp(25px, 16.7px + 2.08vw, 50px);
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
+    @media (max-width: 525px) {
+        row-gap: 15px;
+    }
 }
 
 .portfolio-box1 {
@@ -84,16 +99,36 @@
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+
+    @media (max-width: 525px) {
+        flex-direction: column;
+        row-gap: 15px;
+
+    }
 }
 
 .portfolio-box2 {
     display: flex;
     column-gap: 20px;
+
+    @media (max-width: 525px) {
+        flex-direction: column;
+        row-gap: 15px;
+    }
 }
 
 .portfolio-box3 {
-    display: flex;
     column-gap: 20px;
+    display: none;
+
+    @media (max-width: 525px) {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+}
+
+.portfolio-box3.is-visible {
+    display: flex;
 }
 
 .portfolio-col {
@@ -102,12 +137,22 @@
     flex-direction: column;
     flex-grow: 1;
     row-gap: 30px;
+
+    @media (max-width: 525px) {
+        width: 100%;
+        row-gap: 15px;
+    }
 }
 
 .portfolio-row {
     flex-grow: 1;
     display: flex;
     column-gap: 20px;
+
+    @media (max-width: 525px) {
+        flex-direction: column;
+        row-gap: 15px;
+    }
 }
 
 .portfolio-card1 {
@@ -116,6 +161,10 @@
     aspect-ratio: 453 / 766;
     background-image: image-set(url("../img/portfolio/fakel.webp") 1x,
     url("../img/portfolio/fakel@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card2 {
@@ -124,6 +173,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/lokomotiv.webp") 1x,
     url("../img/portfolio/lokomotiv@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card3 {
@@ -132,6 +185,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/zenit.webp") 1x,
     url("../img/portfolio/zenit@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card4 {
@@ -140,6 +197,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/spartak.webp") 1x,
     url("../img/portfolio/spartak@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card5 {
@@ -148,6 +209,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/salavat-ulaev.webp") 1x,
     url("../img/portfolio/salavat-ulaev@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card6 {
@@ -156,6 +221,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/sochi.webp") 1x,
     url("../img/portfolio/sochi@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card7 {
@@ -164,6 +233,10 @@
     aspect-ratio: 927 / 368;
     background-image: image-set(url("../img/portfolio/fk-dinamo.webp") 1x,
     url("../img/portfolio/fk-dinamo@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 
@@ -173,6 +246,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/barys.webp") 1x,
     url("../img/portfolio/barys@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card9 {
@@ -181,6 +258,10 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/vhl.webp") 1x,
     url("../img/portfolio/vhl@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }
 
 .portfolio-card10 {
@@ -189,4 +270,8 @@
     aspect-ratio: 453 / 368;
     background-image: image-set(url("../img/portfolio/hk-dinamo.webp") 1x,
     url("../img/portfolio/hk-dinamo@2x.webp") 2x);
+
+    @media (max-width: 525px) {
+        width: 100%;
+    }
 }

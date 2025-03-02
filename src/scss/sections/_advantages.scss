@@ -108,9 +108,15 @@
 
 .advantage-card1 {
     .advantage-card__img {
-        width: 428px;
-        // top: 0;
+        position: absolute;
+        left: 0;
         bottom: -25%;
-        transform: translateX(-50%);
+        margin: 0 auto;
+
+
+        img {
+            box-shadow: -30px 30px 50px 0 rgba(0, 0, 0, 0.45);
+        }
     }
 }
+

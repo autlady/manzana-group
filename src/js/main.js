@@ -1,4 +1,38 @@
 $(document).ready(function() {
+
+  // Mobile menu
+  const toggleMenu = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.header__content');
+  const bodyEl = document.body;
+
+  function showMenu() {
+    let loock = mobileMenu;
+    if (loock.style.maxHeight){
+    loock.style.maxHeight = null;
+    } else {
+        loock.style.maxHeight = loock.scrollHeight + "px";
+    }
+}
+
+
+  if (toggleMenu) {
+     /* клик по иконке гамбургер */
+     toggleMenu.addEventListener('click', function(){
+
+      showMenu();
+
+      if(this.classList.contains('active')){
+          this.classList.remove('active');
+          bodyEl.classList.remove('noscroll');
+      }else{
+          this.classList.add('active');
+          bodyEl.classList.add('noscroll');
+      }
+  });
+  }
+
+
+
   //partners-slider
   $('.partners-slider').slick({
     infinite: true,
@@ -27,6 +61,13 @@ $(document).ready(function() {
   $(window).on('load resize', function() {
     updateSlidesToShow();
 });
+
+const showMore = document.getElementById('show-more');
+const cardsRow = document.querySelector('.portfolio-box3');
+showMore.addEventListener('click', () => {
+  cardsRow.classList.add('is-visible');
+  showMore.style.display = 'none';
+})
 });
 
 
