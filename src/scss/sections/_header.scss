@@ -11,6 +11,7 @@
     padding: 23px 90px;
     border-radius: 10px;
     background-color: var(--color-white);
+    transition: height 0.5s ease-out;
 
     @media (max-width: 1400px) {
         padding-inline: 30px;
@@ -19,6 +20,19 @@
     @media (max-width: 1230px) {
         padding: 15px 15px 15px 10px;
     }
+
+    @media (max-width: 1023px) {
+        // background-color: yellow;
+        height: 58px;
+        padding: 9px 10px 9px 10px;
+        overflow: hidden;
+     }
+}
+
+.header-wrapper.active {
+    // background-color: yellow;
+    height: 434px;
+//     padding-bottom: 25px;
 }
 
 .header-row {
@@ -27,11 +41,7 @@
     align-items: center;
     justify-content: space-between;
 
-    // .btn {
-    //     @media (max-width: 1023px) {
-    //         display: none;
-    //     }
-    // }
+
 }
 
 .header__logo {
@@ -58,24 +68,27 @@
     @media (max-width: 1023px) {
         position: absolute;
         display: block;
-        width: 100%;
-        padding-top: 10px;
-        top: 55px;
+        width: calc(100vw - 40px);
+        padding-inline: 10px;
+        top: 49px;
+        left: -10px;
 
         background-color: var(--color-white);
-        background-color: red;
+        // background-color: red;
         border-radius: 0 0 10px 10px;
 
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        // flex-direction: column;
-        // align-items: flex-start;
+
+
+        // max-height: 0;
+        // overflow: hidden;
+        // transition: max-height 0.3s ease-out;
+
     }
 }
 
 .nav {
     @media (max-width: 1023px) {
+        padding-top: 20px;
         padding-bottom: 20px;
         border-bottom: 1.11px solid #000;
     }
@@ -116,7 +129,7 @@
     @media (max-width: 1023px) {
         display: block;
         padding-top: 15px;
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
     }
 }
 
@@ -152,10 +165,30 @@
     margin-top: 20px;
 }
 
-.loock {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .5s;
+.header__btn {
+    @media (max-width: 1023px) {
+        margin-bottom: 25px;
+    }
 }
+
+// .overlay {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     opacity: 0;
+// }
+
+// .overlay.active {
+//     opacity: 1;
+// }
+
+// .loock {
+//     max-height: 0;
+//     overflow: hidden;
+//     transition: max-height .5s;
+// }
 
 

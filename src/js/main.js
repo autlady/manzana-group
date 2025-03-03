@@ -2,7 +2,9 @@ $(document).ready(function() {
 
   // Mobile menu
   const toggleMenu = document.querySelector('.menu-toggle');
+  const headerMob = document.querySelector('.header-wrapper');
   const mobileMenu = document.querySelector('.header__content');
+  const overlay = document.querySelector('.overlay');
   const bodyEl = document.body;
 
   function showMenu() {
@@ -19,13 +21,17 @@ $(document).ready(function() {
      /* клик по иконке гамбургер */
      toggleMenu.addEventListener('click', function(){
 
-      showMenu();
+      // showMenu();
 
       if(this.classList.contains('active')){
           this.classList.remove('active');
+          headerMob.classList.remove('active');
+          // overlay.classList.remove('active');
           bodyEl.classList.remove('noscroll');
       }else{
           this.classList.add('active');
+          headerMob.classList.add('active');
+          // overlay.classList.add('active');
           bodyEl.classList.add('noscroll');
       }
   });
