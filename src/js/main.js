@@ -7,14 +7,14 @@ $(document).ready(function() {
   const overlay = document.querySelector('.overlay');
   const bodyEl = document.body;
 
-  function showMenu() {
-    let loock = mobileMenu;
-    if (loock.style.maxHeight){
-    loock.style.maxHeight = null;
-    } else {
-        loock.style.maxHeight = loock.scrollHeight + "px";
-    }
-}
+//   function showMenu() {
+//     let loock = mobileMenu;
+//     if (loock.style.maxHeight){
+//     loock.style.maxHeight = null;
+//     } else {
+//         loock.style.maxHeight = loock.scrollHeight + "px";
+//     }
+// }
 
 
   if (toggleMenu) {
@@ -26,12 +26,12 @@ $(document).ready(function() {
       if(this.classList.contains('active')){
           this.classList.remove('active');
           headerMob.classList.remove('active');
-          // overlay.classList.remove('active');
+          overlay.classList.remove('active');
           bodyEl.classList.remove('noscroll');
       }else{
           this.classList.add('active');
           headerMob.classList.add('active');
-          // overlay.classList.add('active');
+          overlay.classList.add('active');
           bodyEl.classList.add('noscroll');
       }
   });

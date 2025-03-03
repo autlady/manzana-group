@@ -1,33 +1,33 @@
 // ===== HEADER =====
 header.header
-   //- .overlay
    .container
-      .header-wrapper
-         .header-row
-            // ===== logo =====
-            a(href="#!").header__logo
-               img(src="./img/logo.svg" width="328" height="53" alt="manzana logo")
-            .header__content.hidden
-               // ===== nav =====
-               nav.nav
-                  ul.nav__list
+         .header-wrapper
+            .header-row
+               // ===== logo =====
+               a(href="#!").header__logo
+                  img(src="./img/logo.svg" width="328" height="53" alt="manzana logo")
+               .header__content
+                  // ===== nav =====
+                  nav.nav
+                     ul.nav__list
+                        li
+                           a(href="#!") Направления
+                        li
+                           a(href="#!") Экспертиза
+                        li
+                           a(href="#!") Портфолио
+                  // ===== contacts =====
+                  ul.header__contacts
                      li
-                        a(href="#!") Направления
+                        span Телефон:
+                        a(href="tel:+78007750111").header__contacts-tel 8 (800) 775 0111
                      li
-                        a(href="#!") Экспертиза
-                     li
-                        a(href="#!") Портфолио
-               // ===== contacts =====
-               ul.header__contacts
-                  li
-                     span Телефон:
-                     a(href="tel:+78007750111").header__contacts-tel 8 (800) 775 0111
-                  li
-                     span Почта:
-                     a(href="mailto:welcome@manzanagroup.ru").header__contacts-mail welcome@manzanagroup.ru
-               .header__btn
-                  button.btn Написать нам
-            // ===== burger =====
-            button.menu-toggle
-               span
+                        span Почта:
+                        a(href="mailto:welcome@manzanagroup.ru").header__contacts-mail welcome@manzanagroup.ru
+                  .header__btn
+                     button.btn Написать нам
+               // ===== burger =====
+               button.menu-toggle
+                  span
+   .overlay
 

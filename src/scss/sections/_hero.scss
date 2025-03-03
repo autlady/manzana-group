@@ -1,8 +1,21 @@
 .hero {
     position: relative;
+    margin-top: -1px;
+    padding-top: 68px;
     padding-bottom: 38px;
-    // overflow: hidden;
+    overflow: hidden;
     background-color: var(--prime-color);
+
+    @media (max-width: 1599px) {
+        padding-top: remy(68);
+        padding-bottom: remy(38);
+    }
+
+
+    @media (max-width: 767px) {
+        padding-top: 25px;
+        padding-bottom: 350px;
+    }
 }
 
 .hero-content {
@@ -21,24 +34,64 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+
+        @media (max-width: 1599px) {
+            width: remy(708);
+            height: remy(708);
+            // top: remy(64);
+        }
     }
 }
 
 .hero__title {
-    margin-bottom: clamp(10px, 4.7px + 1.33vw, 26px);
+    margin-bottom: 26px;
+
+    @media (max-width: 1599px) {
+        margin-bottom: remy(26);
+    }
+
+    @media (max-width: 375px) {
+        margin-bottom: 10px;
+    }
 }
 
 .hero__text {
     max-width: 523px;
     margin-bottom: 67px;
-    font-size: clamp(14px, 10.3px + 0.92vw, 25px);
+    font-size: 25px;
     font-weight: 700;
     line-height: 1.32;
     color: var(--color-white);
+
+    @media (max-width: 1599px) {
+        max-width: remy(523);
+        font-size: remy(25);
+        margin-bottom: remy(67);
+    }
+
+    @media(max-width: 767px) {
+        max-width: 335px;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    @media (max-width: 375px) {
+
+        margin-bottom: 346px;
+    }
+
 }
 
 .hero__discuss {
     padding-left: 121px;
+
+    @media (max-width: 1599px) {
+        padding-left: remy(121);
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 70px;
+    }
 
 }
 .btn-discuss {
@@ -50,6 +103,11 @@
     z-index: 2;
 
     cursor: pointer;
+
+    @media (max-width: 1599px) {
+        width: remy(161);
+        height: remy(161);
+    }
 
     @media (max-width: 767px) {
         width: 112px;
@@ -68,7 +126,14 @@
         background-color: var(--accent-red);
         z-index: -1;
 
+        @media (max-width: 1599px) {
+            left: remy(-120);
+            width: remy(163);
+            height: remy(163);
+        }
+
         @media (max-width: 767px) {
+            left: -70px;
             width: 112px;
             height: 112px;
         }
@@ -87,6 +152,20 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: 2;
+
+        @media (max-width: 1599px) {
+            top: remy(39);
+            left: remy(89);
+            width: remy(290);
+            height: remy(240);
+        }
+
+        @media(max-width: 767px) {
+            top: 26px;
+            left: 62px;
+            width: 206px;
+            height: 170px;
+        }
     }
 }
 
@@ -107,7 +186,14 @@
 }
 
 .btn-discuss__text {
+    width: 142px;
+    height: 143px;
     animation: rotation 10s linear 0s infinite running normal;
+
+    @media (max-width: 1599px) {
+        width: remy(142);
+        height: remy(143);
+    }
 
     @media (max-width: 767px) {
         width: 100px;
@@ -129,11 +215,18 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 72px;
+    height: 73px;
 
-    // @media (max-width: 767px) {
-    //     width: 50px;
-    //     height: 50px;
-    // }
+    @media (max-width: 1599px) {
+        width: remy(72);
+        height: remy(73);
+    }
+
+    @media (max-width: 767px) {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .hero__gates {
@@ -141,7 +234,22 @@
     right: -32px;
     top: -140px;
     z-index: 2;
-    width: clamp(432px, 260.7px + 42.83vw, 946px);
+    width: 946px;
+
+    @media(max-width: 1599px) {
+        width: remy(946);
+        right: remy(-32);
+        top: remy(-140);
+    }
+
+    @media (max-width: 767px) {
+        // position: relative;
+        width: 550px;
+        height: 530px;
+        bottom: 0px;
+        right: 320px;
+        top: 255px;
+    }
 }
 
 .hero__arrow {
@@ -153,14 +261,43 @@
 
 .hero__ball {
     position: absolute;
-    top: 0;
-    right: 0;
+    width: 450px;
+    // height: 479px;
+    top: -133px;
+    right: -106px;
     z-index: 2;
+
+    @media(max-width: 1599px) {
+        width: remy(450);
+        // height: remy(479);
+        top: remy(-133);
+        right: remy(-106);
+    }
+
+    @media(max-width: 767px) {
+        width: 265px;
+        height: 265px;
+        // top: remy(-133);
+        // right: remy(-106);
+    }
 }
 
 .hero__puck {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    width: 286px;
+    // height: 265px;
+    bottom: -104px;
+    right: 325px;
     z-index: 2;
+
+    @media(max-width: 1599px) {
+        width: remy(286);
+        // height: remy(265);
+        bottom: remy(-104);
+        right: remy(325);
+    }
+
+    @media(max-width: 767px) {
+        width: 114px;
+    }
 }
