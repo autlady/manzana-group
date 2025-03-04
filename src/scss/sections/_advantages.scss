@@ -12,13 +12,15 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 26px;
 
-    @media (max-width: 1250px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
+    @media (max-width: 1599px) {
+        grid-gap: remy(26);
     }
 
     @media (max-width: 767px) {
         grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        justify-items: center;
     }
 }
 
@@ -34,6 +36,7 @@
 
     .advantage-card__img {
         position: absolute;
+        background-color: transparent;
     }
 
     .advantage-card__num {
@@ -52,6 +55,26 @@
         line-height: 1.3;
         letter-spacing: -0.03em;
         color: var(--prime-color);
+
+        @media (max-width: 1599px) {
+            width: remy(48);
+            height: remy(48);
+            font-size: remy(23);
+        }
+
+        @media (max-width: 767px) {
+            width: 36px;
+            height: 36px;
+            font-size: 17px;
+            color: #000;
+        }
+
+        @media (max-width: 374px) {
+            width: remy2(36);
+            height: remy2(36);
+            font-size: remy2(17);
+        }
+
     }
 
     .advantage-card__text {
@@ -60,8 +83,16 @@
         letter-spacing: -0.03em;
         color: var(--prime-color);
 
+        @media (max-width: 1599px) {
+            font-size: remy(22);
+        }
+
         @media (max-width: 767px) {
             font-size: 16px;
+        }
+
+        @media (max-width: 374px) {
+            font-size: remy2(16);
         }
 
         span {
@@ -70,12 +101,28 @@
             @media (max-width: 767px) {
                 font-size: 18px;
             }
+
+            @media (max-width: 374px) {
+                font-size: remy2(18);
+            }
         }
     }
 
+    @media (max-width: 1599px) {
+        min-height: remy(620);
+        padding: remy(26) remy(29) remy(40) remy(30);
+    }
+
     @media (max-width: 767px) {
+        width: 335px;
         min-height: 347px;
         padding: 19px 11px 26px 22px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(335);
+        min-height: remy2(347);
+        padding: remy2(19) remy2(11) remy2(26) remy2(22);
     }
 }
 
@@ -104,18 +151,87 @@
     @media (max-width: 767px) {
         min-height: 466px;
     }
+
+    @media (max-width: 374px) {
+        min-height: remy2(466);
+    }
 }
 
 .advantage-card1 {
     .advantage-card__img {
+        width: 529px;
         position: absolute;
-        left: 0;
-        bottom: -25%;
-        margin: 0 auto;
+        left: -75px;
+        bottom: -35%;
 
+        @media (max-width: 1599px) {
+            width: remy(529);
+            left: remy(-75);
+        }
 
-        img {
-            box-shadow: -30px 30px 50px 0 rgba(0, 0, 0, 0.45);
+        @media (max-width: 767px) {
+            width: 310px;
+            bottom: -43%;
+            left: -5px;
+        }
+
+        @media (max-width: 374px) {
+            width: remy2(310);
+            left: remy2(-5);
+        }
+    }
+}
+
+.advantage-card2 {
+    .advantage-card__img {
+        width: 541px;
+        position: absolute;
+        top: -140px;
+        right: -75px;
+
+        @media (max-width: 1599px) {
+            width: remy(541);
+            top: remy(-140);
+            right: remy(-75);
+        }
+
+        @media (max-width: 767px) {
+            width: 420px;
+            top: -80px;
+            right: -68px;
+        }
+
+        @media (max-width: 374px) {
+            width: remy2(420);
+            top: remy2(-80);
+            right: remy2(-68);
+        }
+    }
+}
+
+.advantage-card3 {
+    .advantage-card__img {
+        width: 663px;
+        position: absolute;
+        bottom: -210px;
+        left: -100px;
+
+        @media (max-width: 1599px) {
+            width: remy(663);
+            bottom: remy(-210);
+            left: remy(-100);
+        }
+
+        @media (max-width: 767px) {
+            width: 410px;
+            bottom: -191px;
+            left: -12px;
+        }
+
+        @media (max-width: 374px) {
+            width: remy2(410);
+            bottom: remy2(-191);
+            left: remy2(-12);
         }
     }
 }

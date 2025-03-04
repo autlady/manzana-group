@@ -89,6 +89,10 @@
     flex-direction: column;
     row-gap: 30px;
 
+    @media (max-width: 1599px) {
+        row-gap: remy(20);
+    }
+
     @media (max-width: 525px) {
         row-gap: 15px;
     }
@@ -99,6 +103,10 @@
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+
+    @media (max-width: 1599px) {
+        column-gap: remy(20);
+    }
 
     @media (max-width: 525px) {
         flex-direction: column;
@@ -111,6 +119,10 @@
     display: flex;
     column-gap: 20px;
 
+    @media (max-width: 1599px) {
+        column-gap: remy(20);
+    }
+
     @media (max-width: 525px) {
         flex-direction: column;
         row-gap: 15px;
@@ -120,6 +132,10 @@
 .portfolio-box3 {
     column-gap: 20px;
     display: none;
+
+    @media (max-width: 1599px) {
+        column-gap: remy(20);
+    }
 
     @media (max-width: 525px) {
         flex-direction: column;
@@ -138,6 +154,10 @@
     flex-grow: 1;
     row-gap: 30px;
 
+    @media (max-width: 1599px) {
+        row-gap: remy(30);
+    }
+
     @media (max-width: 525px) {
         width: 100%;
         row-gap: 15px;
@@ -148,6 +168,10 @@
     flex-grow: 1;
     display: flex;
     column-gap: 20px;
+
+    @media (max-width: 1599px) {
+        column-gap: remy(20);
+    }
 
     @media (max-width: 525px) {
         flex-direction: column;

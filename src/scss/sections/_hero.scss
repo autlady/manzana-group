@@ -247,7 +247,7 @@
         width: 550px;
         height: 530px;
         bottom: 0px;
-        right: 320px;
+        right: 40px;
         top: 255px;
     }
 }
@@ -266,6 +266,10 @@
     top: -133px;
     right: -106px;
     z-index: 2;
+    animation: moveBall;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(450);
@@ -289,6 +293,10 @@
     bottom: -104px;
     right: 325px;
     z-index: 2;
+    animation: movePuck;
+    animation-duration: 0.5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(286);
@@ -299,5 +307,23 @@
 
     @media(max-width: 767px) {
         width: 114px;
+    }
+}
+
+@keyframes moveBall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-300px, 220px);
+    }
+}
+
+@keyframes movePuck {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(150px, -200px);
     }
 }
