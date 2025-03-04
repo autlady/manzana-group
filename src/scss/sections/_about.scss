@@ -1,7 +1,13 @@
 .about {
+    margin-top: -2px;
     padding-top: 50px;
     padding-bottom: 30px;
     background-color: var(--prime-color);
+
+    @media (max-width: 1599px) {
+        padding-top: remy(50);
+        padding-bottom: remy(30);
+    }
 }
 
 .about__title {
@@ -11,8 +17,16 @@
     font-weight: 500;
     color: #fff;
 
+    @media (max-width: 1599px) {
+        margin-bottom: remy(30);
+    }
+
     @media (max-width: 767px) {
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 374px) {
+        margin-bottom: remy2(20);
     }
 }
 
@@ -21,8 +35,15 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 16px;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1599px) {
+        grid-gap: remy(16);
+    }
+
+    @media (max-width: 767px) {
         grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        justify-items: center;
+        grid-gap: 16px;
     }
 }
 
@@ -31,14 +52,41 @@
     border-radius: 20px;
     background-color: rgba(232, 233, 238, 0.2);
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1599px) {
+        padding: remy(40) remy(15) remy(48) remy(30);
+    }
+
+    @media (max-width: 767px) {
+        width: 335px;
         padding: 28px 11px 21px 23px;
         min-height: 208px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(335);
+        padding: remy2(28) remy2(11) remy2(21) remy2(23);
+        min-height: remy2(208);
     }
 }
 
 .about-card__img {
     margin-bottom: 20px;
+    width: 32px;
+
+    @media (max-width: 1599px) {
+        width: remy(32);
+        margin-bottom: remy(20);
+    }
+
+    @media (max-width: 767px) {
+        width: 24px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(24);
+        margin-bottom: remy2(20);
+    }
 }
 
 .about-card__text {
@@ -48,18 +96,33 @@
     letter-spacing: -0.03em;
     color: var(--color-white);
 
+    @media (max-width: 1599px) {
+        font-size: remy(20);
+    }
+
     @media (max-width: 767px) {
         font-size: 16px;
         line-height: 1.42;
+    }
+
+    @media (max-width: 374px) {
+        font-size: remy2(16);
     }
 
     span {
         font-weight: 700;
         font-size: 25px;
 
+        @media (max-width: 1599px) {
+            font-size: remy(25);
+        }
 
-    @media (max-width: 767px) {
-        font-size: 18px;
-    }
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 374px) {
+            font-size: remy2(18);
+        }
     }
 }
