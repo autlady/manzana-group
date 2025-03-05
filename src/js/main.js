@@ -1,11 +1,80 @@
 $(document).ready(function() {
 
   // Mobile menu
-  const toggleMenu = document.querySelector('.menu-toggle');
-  // const headerMob = document.querySelector('.header-wrapper');
-  // const mobileMenu = document.querySelector('.header__content');
   const overlay = document.querySelector('.overlay');
+  const burger = $('.menu-toggle');
   const bodyEl = document.body;
+
+  function resize() {
+    const menu = $('header .header__inner .menu');
+    const contacts = $('header .header__inner .menu .header__contacts')
+    const header = $('header');
+    const widthHead = header.width();
+
+    if (widthHead < 1024) {
+        menu.css({'display':'none'});
+        contacts.css({'display':'block'});
+        header.addClass('mobile');
+    } else {
+        menu.css({'display':'flex'});
+        menu.css({'align-items':'center'});
+        contacts.css({'display':'none'});
+        header.removeClass('mobile');
+    }
+}
+
+resize();
+
+$(window).resize(function() {
+    resize();
+    if($(window).width() > 1023) {
+      $(overlay).removeClass('active');
+      $(burger).removeClass('active');
+      $(bodyEl).removeClass('noscroll');
+    }
+});
+
+burger.click(function(){
+  if(this.classList.contains('active')){
+      this.classList.remove('active');
+      bodyEl.classList.remove('noscroll');
+      overlay.classList.remove('active');
+  }else{
+      this.classList.add('active');
+      bodyEl.classList.add('noscroll');
+      overlay.classList.add('active');
+  }
+
+  element = $('.menu');
+  display = element.css('display');
+  if(display == 'none')
+      $('.menu').slideDown(400);
+  if(display == 'block')
+      $('.menu').slideUp(400);
+});
+
+$('.menu a').click(function(){
+  var header = $('header');
+  var widthHead = header.width();
+  if(widthHead < 1024)
+      $('.menu').slideUp(400);
+      $(overlay).removeClass('active');
+      $(burger).removeClass('active');
+      $(bodyEl).removeClass('noscroll');
+
+});
+
+$('.menu .header__btn').click(function(){
+  var header = $('header');
+  var widthHead = header.width();
+  if(widthHead < 1024)
+      $('.menu').slideUp(400);
+      $(overlay).removeClass('active');
+      $(burger).removeClass('active');
+      $(bodyEl).removeClass('noscroll');
+});
+
+
 
 //   function showMenu() {
 //     let loock = mobileMenu;
