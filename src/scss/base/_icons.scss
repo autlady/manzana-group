@@ -2,9 +2,19 @@
     width: 53px;
     height: 52px;
 
+    @media(max-width: 1599px) {
+        width: remy(53);
+        height: remy(52);
+    }
+
     @media (max-width: 767px) {
         width: 42px;
         height: 39px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(42);
+        height: remy2(39);
     }
 }
 
@@ -12,9 +22,19 @@
     width: 65px;
     height: 67px;
 
+    @media(max-width: 1599px) {
+        width: remy(65);
+        height: remy(67);
+    }
+
     @media (max-width: 767px) {
         width: 42px;
         height: 39px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(42);
+        height: remy2(39);
     }
 }
 
@@ -22,9 +42,19 @@
     width: 78px;
     height: 81px;
 
+    @media(max-width: 1599px) {
+        width: remy(78);
+        height: remy(81);
+    }
+
     @media (max-width: 767px) {
         width: 48px;
         height: 46px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(48);
+        height: remy2(46);
     }
 }
 

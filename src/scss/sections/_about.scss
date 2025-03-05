@@ -8,6 +8,14 @@
         padding-top: remy(50);
         padding-bottom: remy(30);
     }
+
+    @media (max-width: 767px) {
+        padding-block: 30px;
+    }
+
+    @media (max-width: 374px) {
+        padding-block: remy(30);
+    }
 }
 
 .about__title {

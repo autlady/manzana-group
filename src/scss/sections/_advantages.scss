@@ -1,7 +1,21 @@
 .advantages {
     margin-top: -2px;
-    padding-bottom: clamp(30px, 6.7px + 5.83vw, 100px);
+    padding-top: 56px;
+    padding-bottom: 100px;
     background-color: var(--prime-color);
+
+    @media (max-width: 1599px) {
+        padding-top: remy(56);
+        padding-bottom: remy(100);
+    }
+
+    @media (max-width: 767px) {
+        padding-block: 30px;
+    }
+
+    @media (max-width: 374px) {
+        padding-block: remy2(30);
+    }
 }
 
 .advantages__title {
@@ -75,7 +89,6 @@
             height: remy2(36);
             font-size: remy2(17);
         }
-
     }
 
     .advantage-card__text {

@@ -1,6 +1,22 @@
 .services {
+    padding-top: 40px;
     padding-bottom: 48px;
     background-color: var(--prime-color);
+
+    @media (max-width: 1599px) {
+        padding-top: remy(40);
+        padding-bottom: remy(48);
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 37px;
+    }
+
+    @media (max-width: 374px) {
+        padding-top: remy2(40);
+        padding-bottom: remy2(37);
+    }
 }
 
 .services-cards {
@@ -8,14 +24,15 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 34px;
 
-    @media (max-width: 1250px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
+    @media (max-width: 1599px) {
+        grid-gap: remy(34);
     }
 
     @media (max-width: 767px) {
         grid-template-columns: repeat(1, 1fr);
-
+        grid-gap: 20px;
+        justify-content: center;
+        justify-items: center;
     }
 }
 
@@ -31,9 +48,23 @@
     transition: all .3s ease-in;
     z-index: 1;
 
+    @media (max-width: 1599px) {
+        min-height: remy(294);
+        padding: remy(38) remy(50) remy(46) remy(41);
+        border-radius: remy(20);
+    }
+
     @media (max-width: 767px) {
+        width: 335px;
         padding: 17px 17px 23px 17px;
         min-height: 180px;
+        border-radius: 15px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(335);
+        padding: remy2(17) remy2(17) remy2(23) remy2(17);
+        min-height: remy2(180);
     }
 }
 
@@ -49,6 +80,10 @@
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
+
+    @media (max-width: 1599px) {
+        border-radius: remy(20);
+    }
 }
 
 .service-card:first-child:hover::before {
@@ -67,6 +102,10 @@
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
+
+    @media (max-width: 1599px) {
+        border-radius: remy(20);
+    }
 }
 
 .service-card:nth-child(2):hover::before {
@@ -98,6 +137,10 @@
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
+
+    @media (max-width: 1599px) {
+        border-radius: remy(20);
+    }
 }
 
 .service-card:nth-child(3):hover::before {
@@ -114,6 +157,12 @@
     background-color: black;
     z-index: 2;
 
+    @media (max-width: 1599px) {
+        width: remy(150);
+        height: remy(30);
+        border-top-left-radius: remy(12);
+    }
+
     &::before, &::after {
         content: "";
         width: 28px; // угол + 8px
@@ -122,18 +171,34 @@
         position: absolute;
         border-bottom-right-radius: 20px; // отталкиваемся от этого значения-берем угол из макета
 
+        @media (max-width: 1599px) {
+            width: remy(28);
+            height: remy(28);
+            border-bottom-right-radius: remy(20);
+        }
+
     }
 
     &::before {
         left: -27.7px; // отрицательное значение ширины
         bottom: 1px;
         box-shadow: 6px 12px var(--prime-color); // всегда такие цифры
+
+        @media (max-width: 1599px) {
+            left: remy(-27.7);
+            box-shadow: remy(6) remy(12) var(--prime-color);
+        }
     }
 
     &::after {
         right: 0;
         top: -28px; // отрицательное значение ширины
         box-shadow: 6px 6px var(--prime-color); // всегда такие цифры
+
+        @media (max-width: 1599px) {
+            top: remy(-28);
+            box-shadow: remy(6) remy(6) var(--prime-color);
+        }
     }
 
     @media (max-width: 767px) {
@@ -145,8 +210,17 @@
     display: flex;
     column-gap: 39px;
 
+    @media(max-width: 1599px) {
+        column-gap: remy(39);
+    }
+
     @media (max-width: 767px) {
         flex-direction: column;
+        row-gap: 15px;
+    }
+
+    @media (max-width: 374px) {
+        row-gap: remy2(15);
     }
 }
 
@@ -157,24 +231,45 @@
 .service-card__title {
     margin-top: 10px;
     font-weight: 500;
-    font-size: clamp(19px, 15.3px + 0.92vw, 30px);
+    font-size: 30px;
     line-height: 1.33;
     color: var(--prime-color);
 
+    @media(max-width: 1599px) {
+        margin-top: remy(10);
+        font-size: remy(30);
+    }
+
     @media (max-width: 767px) {
+        font-size: 19px;
         line-height: 1.26;
+        margin-top: 0;
+    }
+
+    @media (max-width: 374px) {
+        font-size: remy2(19);
     }
 }
 
 .service-card__link {
     position: relative;
     padding-left: 3px;
-    font-size: clamp(18px, 17.3px + 0.17vw, 20px);
+    font-size: 20px;
     line-height: 1.36;
     color: var(--second-color);
 
+    @media(max-width: 1599px) {
+        padding-left: remy(3);
+        font-size: remy(20);
+    }
+
     @media (max-width: 767px) {
         padding-left: 0px;
+        font-size: 18px;
+    }
+
+    @media (max-width: 374px) {
+        font-size: remy2(18);
     }
 
     &::before {
@@ -187,9 +282,19 @@
         background-color: var(--second-color);
         width: 120px;
 
+        @media(max-width: 1599px) {
+            width: remy(120);
+            bottom: remy(-13);
+        }
+
         @media (max-width: 767px) {
             bottom: -7px;
             width: 100px;
+        }
+
+        @media (max-width: 374px) {
+            bottom: remy2(-7);
+            width: remy2(100);
         }
     }
 }
