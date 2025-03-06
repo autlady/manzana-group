@@ -24,14 +24,14 @@ header.header
                   span Почта:
                   a(href="mailto:welcome@manzanagroup.ru").header__contacts-mail welcome@manzanagroup.ru
             .header__btn
-               button.btn Написать нам
+               button.btn(data-modal-button="modal-call-form") Написать нам
          // BURGER
          button.menu-toggle
             span
    // OVERLAY
    .overlay
 // MODAL
-div(class="fade-block" data-modal="modal-call-form" id="modal-call-form")
+div(class="fade-block hidden" data-modal="modal-call-form" id="modal-call-form")
    .modal-window
       include ../blocks/call-form.pug
 

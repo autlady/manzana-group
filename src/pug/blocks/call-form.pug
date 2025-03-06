@@ -1,9 +1,11 @@
 // call-form-block
 .call-form-block
     button(class="btn-close-modal" data-modal-close)
+        svg.svg-close
+            use(href="./img/spriteSvg.svg#svg-close")
     form(class="form call-form")
         input(type="hidden" name="form_name" value="Начнем сотрудничество")
-        .form-title Начнем сотрудничество?
+        .form-title Начнем </br> сотрудничество?
         .call-form-subtitle Заполните форму ниже, мы свяжемся с вами и обсудим все детали
         .form-item.form-item-mb15
             input(class="form-input" type="text" name="name" placeholder="Имя")
@@ -18,3 +20,5 @@
                 a(href="#!").call-form-privacy Согласен(-на) с политикой обработки данных
         .form-item.form-item-btn
             button(type="submit" class="submit-btn") Отправить запрос
+    .call-form-block__img
+        img(src="./img/advantages/star.webp" srcset="./img/advantages/star@2x.webp 2x" width="529" height="540" alt="star")
