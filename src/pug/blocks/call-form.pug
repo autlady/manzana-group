@@ -1,0 +1,20 @@
+// call-form-block
+.call-form-block
+    button(class="btn-close-modal" data-modal-close)
+    form(class="form call-form")
+        input(type="hidden" name="form_name" value="Начнем сотрудничество")
+        .form-title Начнем сотрудничество?
+        .call-form-subtitle Заполните форму ниже, мы свяжемся с вами и обсудим все детали
+        .form-item.form-item-mb15
+            input(class="form-input" type="text" name="name" placeholder="Имя")
+        .form-item.form-item-mb15
+            input(class="form-input" type="text" name="tel" placeholder="Email")
+        .form-item.form-item-mb15
+            textarea(class="form-input form-input--textarea" type="text" name="message" placeholder="Расскажите о вашей задаче")
+        .form-item.form-item-mb25
+            label.checkbox
+                input(type="checkbox" name="privacy").real-checkbox
+                span.custom-checkbox
+                a(href="#!").call-form-privacy Согласен(-на) с политикой обработки данных
+        .form-item.form-item-btn
+            button(type="submit" class="submit-btn") Отправить запрос

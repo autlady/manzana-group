@@ -1,12 +1,12 @@
-// ===== HEADER =====
+// HEADER
 header.header
    .container
       .header__inner
-         // ===== logo =====
+         // LOGO
          a(href="#!").header__logo
             img(src="./img/logo.svg" width="328" height="53" alt="manzana logo")
          .menu
-            // ===== nav =====
+            // NAV
             nav.nav
                ul.nav__list
                   li
@@ -15,7 +15,7 @@ header.header
                      a(href="#!") Экспертиза
                   li
                      a(href="#!") Портфолио
-            // ===== contacts =====
+            // CONTACTS
             ul.header__contacts
                li
                   span Телефон:
@@ -25,9 +25,14 @@ header.header
                   a(href="mailto:welcome@manzanagroup.ru").header__contacts-mail welcome@manzanagroup.ru
             .header__btn
                button.btn Написать нам
-         // ===== burger =====
+         // BURGER
          button.menu-toggle
             span
+   // OVERLAY
    .overlay
+// MODAL
+div(class="fade-block" data-modal="modal-call-form" id="modal-call-form")
+   .modal-window
+      include ../blocks/call-form.pug
 
 
