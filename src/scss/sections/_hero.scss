@@ -5,24 +5,7 @@
     padding-bottom: 38px;
     background-color: var(--prime-color);
 
-    .hero__decor {
-        overflow: hidden;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        width: 1100px;
-        height: 1100px;
-        z-index: 9;
 
-        @media (max-width: 1599px) {
-            width: remy(1100);
-            height: remy(1100);
-        }
-
-        img {
-            transform: translate(15%, 44%);
-        }
-    }
 
     @media (max-width: 1599px) {
         padding-top: remy(200);
@@ -230,11 +213,38 @@
 }
 
 .hero__images {
+    border: 5px solid red;
     width: 755px;
     height: 550px;
     position: absolute;
     right: 84px;
     bottom: -38px;
+
+    .hero__decor {
+        border: 5px solid yellow;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        transform: translateX(8%);
+        width: 1100px;
+        height: 1100px;
+        z-index: 9;
+
+        @media (max-width: 1599px) {
+            width: remy(1100);
+            height: remy(1100);
+        }
+
+        @media (max-width: 767px) {
+            width: 375px;
+            height: 375px;
+        }
+
+        img {
+            transform: translate(15%, 44%);
+        }
+    }
 
     @media (max-width: 1599px) {
         width: remy(755);
@@ -245,8 +255,11 @@
 
     @media (max-width: 767px) {
         position: relative;
+        width: 345px;
+        right: unset;
+        bottom: unset;
+        height: 345px;
     }
-
  }
 
 .hero__gates {
@@ -263,6 +276,13 @@
         height: remy(520);
     }
 
+    @media (max-width: 767px) {
+        width: 416px;
+        height: 403px;
+        right: auto;
+        left: -23%;
+    }
+
 
     img {
         height: 730px;
@@ -274,6 +294,14 @@
             height: remy(730);
             top: remy(-20);
             width: remy(730);
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: relative;
+            top: 67px;
         }
     }
 }
@@ -287,16 +315,37 @@
 
 .hero__ball {
     position: absolute;
-    width: 450px;
-    height: 479px;
-    top: -25%;
-    right: -25%;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    top: 8%;
+    right: -12%;
 
     z-index: 11;
-    animation: moveBall;
-    animation-duration: 0.5s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+
+    @media(max-width: 1599px) {
+        width: remy(250);
+        height: remy(250);
+    }
+
+    @media(max-width: 767px) {
+        right: 0;
+    }
+}
+
+.hero__ball img {
+    position: relative;
+    width: 450px;
+    height: 479px;
+    object-fit: contain;
+    max-width: 450px;
+    top: -65%;
+    left: -46%;
+
+    // animation: moveBall;
+    // animation-duration: 0.5s;
+    // animation-delay: 1s;
+    // animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(450);
@@ -317,10 +366,10 @@
     left: 10%;
     transform: translate(50%, 50%);
     z-index: 11;
-    animation: movePuck;
-    animation-duration: 0.5s;
-    animation-delay: 1.8s;
-    animation-fill-mode: forwards;
+    // animation: movePuck;
+    // animation-duration: 0.5s;
+    // animation-delay: 1.8s;
+    // animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(286);
