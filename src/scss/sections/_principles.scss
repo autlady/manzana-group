@@ -1,38 +1,148 @@
 .principles {
     padding-top: 50px;
     background: var(--prime-color);
+
+    @media (max-width: 1599px) {
+        padding-top: remy(50);
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 30px;
+    }
 }
 
 .principles__top {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
 }
 
 .principles__title {
-    max-width: 703px;
+
 }
 
 .principles__subtitle {
     padding-top: 31px;
     max-width: 411px;
+    text-align: right;
+
     p {
         font-weight: 500;
         font-size: 25px;
         line-height: 1.28;
         color: var(--color-white);
+
+        @media (max-width: 1599px) {
+            font-size: remy(25);
+        }
+
+        @media (max-width: 767px) {
+            font-size: 17px;
+            line-height: 1.53;
+        }
+    }
+
+    @media (max-width: 1599px) {
+        padding-top: remy(31);
+        max-width: remy(411);
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 0;
+        max-width: unset;
+        text-align: left;
     }
 }
 
 .principles__row {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        justify-content: unset;
+        row-gap: 35px;
+    }
+
 }
 
 .principles__images {
+    padding-top: 22px;
+    margin-left: -65px;
     flex-shrink: 0;
+    position: relative;
+
+    @media (max-width: 1599px) {
+        padding-top: remy(22);
+        margin-left: remy(-65);
+        margin-left: -8px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 35px;
+    }
+
 }
 
 .principles__project {
-    width: 947px;
+    width: 994px;
+    height: 792px;
+
+    @media (max-width: 1599px) {
+        width: remy(994);
+        height: remy(792);
+    }
+
+    @media (max-width: 767px) {
+        width: 361px;
+        height: 287px;
+    }
+
+    @media (max-width: 364px) {
+        width: remy2(361);
+        height: remy2(287);
+    }
+
+    .principles__project-img {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .principles__project-img-mob {
+        display: none;
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+}
+
+.principles__rocket {
+    position: absolute;
+    top: 22px;
+    right: 29%;
+    width: 217px;
+    height: 265px;
+
+    @media (max-width: 1599px) {
+        width: remy(217);
+        height: remy(265);
+        top: remy(22);
+    }
+
+    @media (max-width: 767px) {
+        width: 78px;
+        top: 35px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(78);
+        top: remy2(35);
+    }
 }
 
 .principles__col {
@@ -47,6 +157,16 @@
         border-radius: remy(30);
         width: remy(477);
     }
+
+    @media (max-width: 767px) {
+        padding: 32px 15px 23px 21px;
+        border-radius: 21px;
+        width: 335px;
+    }
+
+    @media (max-width: 420px) {
+        width: 100%;
+    }
 }
 
 .principles-list__item {
@@ -57,6 +177,11 @@
 
     @media (max-width: 1599px) {
         font-size: remy(18);
+    }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 1.43;
     }
 }
 }
@@ -80,6 +205,12 @@
             width: remy(5);
             height: remy(5);
         }
+
+        @media (max-width: 767px) {
+            width: 5px;
+            height: 5px;
+            bottom: -3px;
+        }
     }
 
     &::before {
@@ -93,6 +224,12 @@
     @media (max-width: 1599px) {
         padding-bottom: remy(20);
     }
+
+    @media (max-width: 767px) {
+        padding-bottom: 15px;
+    }
+
+
 }
 
 .principles-list__item + .principles-list__item {
@@ -101,11 +238,14 @@
     @media (max-width: 1599px) {
         padding-top: remy(30);
     }
+
+    @media (max-width: 767px) {
+        padding-top: 15px;
+    }
 }
 
 .principles-list__title {
     margin-bottom: 15px;
-    max-width: 247px;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -135,13 +275,27 @@
             width: remy(19);
             height: remy(19);
         }
+
+        @media (max-width: 767px) {
+            margin-top: 8px;
+            border: 0.28px solid #78be20;
+            border-radius: 1px;
+            width: 14px;
+            height: 14px;
+        }
     }
 
     @media (max-width: 1599px) {
         margin-bottom: remy(15);
-        max-width: remy(247);
         column-gap: remy(15);
         font-size: remy(30);
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 10px;
+        column-gap: 11px;
+        font-size: 23px;
+        line-height: 1.13;
     }
 }
 
