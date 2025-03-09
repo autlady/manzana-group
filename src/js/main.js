@@ -161,7 +161,24 @@ const cardsRow = document.querySelector('.portfolio-box3');
 showMore.addEventListener('click', () => {
   cardsRow.classList.add('is-visible');
   showMore.style.display = 'none';
-})
+});
+
+// ACCORDEON IN CATALOG SECTION
+const accordeonTitle = document.querySelectorAll('[data-name="accordeon-title"]');
+
+accordeonTitle.forEach(function (item) {
+    item.addEventListener('click', showAccordeon);
+});
+
+function showAccordeon() {
+    this.classList.toggle('show');
+    let loock = this.nextElementSibling;
+    if (loock.style.maxHeight){
+    loock.style.maxHeight = null;
+    } else {
+        loock.style.maxHeight = loock.scrollHeight + "px";
+    }
+}
 });
 
 

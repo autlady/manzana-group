@@ -81,9 +81,13 @@
         margin-left: remy(-65);
         margin-left: -8px;
     }
-
     @media (max-width: 767px) {
         padding-top: 35px;
+        margin-left: -8px;
+    }
+
+    @media (max-width: 375px) {
+        margin-left: -15px;
     }
 
 }
