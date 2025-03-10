@@ -1,0 +1,52 @@
+.instruments {
+    background: linear-gradient(180deg, #000 0%, #78be20 100%);
+}
+
+.instruments__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.instruments-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid red;
+}
+
+.instruments-list__title {
+    width: 400px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1;
+    color: #fff;
+}
+
+.instruments-list__logos {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.instruments-list__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+
+    span {
+        flex-shrink: 0;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1;
+        color: var(--color-white);
+    }
+}
+
+.instruments-list__img  {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
