@@ -173,10 +173,10 @@ accordeonTitle.forEach(function (item) {
 function showAccordeon() {
     this.classList.toggle('show');
     let loock = this.nextElementSibling;
-    if (loock.style.maxHeight){
-    loock.style.maxHeight = null;
+    if (loock.style.height){
+    loock.style.height = null;
     } else {
-        loock.style.maxHeight = loock.scrollHeight + "px";
+        loock.style.height = loock.scrollHeight + "px";
     }
 }
 });
