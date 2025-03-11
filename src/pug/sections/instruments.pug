@@ -1,5 +1,5 @@
 // INSTRUMENTS
-section.instruments
+section.instruments.none
     .container
         // INSTRUMENTS TOP
         .instruments__top
@@ -14,39 +14,128 @@ section.instruments
                 .instruments-list__title CRM
                 .instruments-list__logos
                     .instruments-list__logo
-                        img(src="./img/instruments/soap.svg" alt="icon" width="83" height="55")
+                        .instruments-list__img
+                            img(src="./img/instruments/soap.svg" alt="icon" width="83" height="55")
                         span SOAP
                     .instruments-list__logo
-                        img(src="./img/instruments/rest.svg" alt="icon" width="56" height="56")
+                        .instruments-list__img
+                            img(src="./img/instruments/rest.svg" alt="icon" width="56" height="56")
                         span REST
                     .instruments-list__logo
-                        img(src="./img/instruments/net.svg" alt="icon" width="97" height="39")
+                        .instruments-list__img
+                            img(src="./img/instruments/net.svg" alt="icon" width="97" height="39")
                         span .Net
                     .instruments-list__logo
-                        img(src="./img/instruments/sql.svg" alt="icon" width="51" height="55")
+                        .instruments-list__img
+                            img(src="./img/instruments/sql.svg" alt="icon" width="51" height="55")
                         span Sql
                     .instruments-list__logo
-                        img(src="./img/instruments/microsoft.svg" alt="icon" width="55" height="55")
+                        .instruments-list__img
+                            img(src="./img/instruments/microsoft.svg" alt="icon" width="55" height="55")
                         span Microsoft
             // INSTRUMENTS LIST ITEM
             li.instruments-list__item
                 .instruments-list__title CDP
                 .instruments-list__logos
                     .instruments-list__logo
-                        img(src="./img/instruments/clickhouse.svg" alt="icon" width="63" height="55")
+                        .instruments-list__img
+                            img(src="./img/instruments/clickhouse.svg" alt="icon" width="63" height="55")
                         span Clickhouse
                     .instruments-list__logo
-                        img(src="./img/instruments/kafka.svg" alt="icon" width="34" height="55")
+                        .instruments-list__img
+                            img(src="./img/instruments/kafka.svg" alt="icon" width="34" height="55")
                         span Kafka
                     .instruments-list__logo
-                        img(src="./img/instruments/redis.svg" alt="icon" width="64" height="55")
+                        .instruments-list__img
+                            img(src="./img/instruments/redis.svg" alt="icon" width="64" height="55")
                         span Redis
                     .instruments-list__logo
-                        img(src="./img/instruments/materialize.svg" alt="icon" width="102" height="52")
+                        .instruments-list__img
+                            img(src="./img/instruments/materialize.svg" alt="icon" width="102" height="52")
                         span Materialize
                     .instruments-list__logo
-                        img(src="./img/instruments/KSQL.svg" alt="icon" width="34" height="62")
+                        .instruments-list__img
+                            img(src="./img/instruments/KSQL.svg" alt="icon" width="34" height="62")
                         span ksqlDB
+            // INSTRUMENTS LIST ITEM
+            li.instruments-list__item
+                .instruments-list__title BI
+                .instruments-list__logos
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/excel.svg" alt="icon" width="55" height="55")
+                        span Excel
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/apache.svg" alt="icon" width="95" height="47")
+                        span Apache superset
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/power.svg" alt="icon" width="53" height="55")
+                        span Power BI
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/metabase.svg" alt="icon" width="51" height="66")
+                        span Metabase
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/cube.svg" alt="icon" width="57" height="65")
+                        span CubeJS
+            // INSTRUMENTS LIST ITEM
+            li.instruments-list__item
+                .instruments-list__title Mobile & web applications
+                .instruments-list__logos
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/kotlin.svg" alt="icon" width="55" height="55")
+                        span Kotlin
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/swift.svg" alt="icon" width="55" height="55")
+                        span Swift
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/flatter.svg" alt="icon" width="47" height="57")
+                        span Flatter
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/laravel.svg" alt="icon" width="53" height="55")
+                        span Laravel
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/bitrix.svg" alt="icon" width="57" height="57")
+                        span Битрикс24
+            // INSTRUMENTS LIST ITEM
+            li.instruments-list__item
+                .instruments-list__title OMAP
+                    p (Omnichannel Marketing Automation Platforms)
+                .instruments-list__logos
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/go.svg" alt="icon" width="53" height="55")
+                        span Go
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/mongo.svg" alt="icon" width="25" height="55")
+                        span MongoDB
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/clickhouse.svg" alt="icon" width="64" height="55")
+                        span Clickhouse
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/airflow.svg" alt="icon" width="55" height="55")
+                        span Apache Airflow
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/kafka.svg" alt="icon" width="34" height="55")
+                        span Kafka
+                    .instruments-list__logo
+                        .instruments-list__img
+                            img(src="./img/instruments/streams.svg" alt="icon" width="112" height="55")
+                        span Kafka Streams
+        .instruments__btn-mob
+            button.btn-send(data-modal-button="modal-call-form") Отправить заявку
 
 
 

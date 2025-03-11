@@ -147,12 +147,20 @@
     }
 
     @media (max-width: 767px) {
-        width: 100%;
+        width: 335px;
         height: 55px;
-        line-height: 50px;
+        line-height: 55px;
         font-size: 18px;
         border-radius: 60px;
-        padding: 36px;
+        padding-inline: 36px;
     }
 
+    @media (max-width: 374px) {
+        width: remy2(335);
+        height: remy2(55);
+        line-height: remy2(55);
+        font-size: remy2(18);
+        border-radius: remy2(60);
+        padding-inline: remy(36);
+    }
 }

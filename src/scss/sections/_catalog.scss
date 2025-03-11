@@ -120,15 +120,18 @@
         }
 
         @media (max-width: 1023px) {
-            right: 40px;
             width: 30px;
             height: 30px;
-
+            right: 40px;
+        }
+        @media (max-width: 767px) {
+            right: 20px;
         }
 
         @media (max-width: 525px) {
             width: 20px;
             height: 20px;
+            right: 10px;
         }
     }
 
@@ -138,6 +141,13 @@
         padding-bottom: 20px;
     }
 }
+
+// .catalog-list__header .catalog-list__title {
+//     padding-top: 26px;
+//     padding-right: 100px;
+//     text-align: justify;
+//     border-top: 1px solid rgba(217, 217, 217, 0.2);
+// }
 
 .show::after {
     content: "";

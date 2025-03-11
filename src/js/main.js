@@ -125,23 +125,21 @@ if (modalFrames.length > 0) {
     }
 };
 
-
-
   //partners-slider
   $('.partners-slider').slick({
     infinite: true,
     draggable: false,
     swipe: false,
-		speed: 5000, // Чем больше, тем медленнее движение
-		slidesToShow: 7,
-		slidesToScroll: 1,
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 0, // Бесшовный эффект
-		cssEase: 'linear', // Линейное движение
-		pauseOnHover: false, // Не останавливать при наведении
-		pauseOnFocus: false,
-		variableWidth: true,
+    speed: 5000, // Чем больше, тем медленнее движение
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0, // Бесшовный эффект
+    cssEase: 'linear', // Линейное движение
+    pauseOnHover: false, // Не останавливать при наведении
+    pauseOnFocus: false,
+    variableWidth: true,
 });
 
   function updateSlidesToShow() {
@@ -154,6 +152,40 @@ if (modalFrames.length > 0) {
 
   $(window).on('load resize', function() {
     updateSlidesToShow();
+});
+
+  //interface-slider
+$('.interface-slider').slick({
+    dots: false,
+    // slidesToShow: 2,
+    prevArrow: '#interface-slider-prev',
+    nextArrow: '#interface-slider-next',
+    // slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
+    // responsive: [
+    //   {
+    //     breakpoint: 1068,
+    //     settings: {
+
+    //       slidesToShow: 3,
+    //       arrows: false
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 1023,
+    //     settings: {
+    //       slidesToShow: 2
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 575,
+    //     settings: {
+    //       centerMode: true,
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
 });
 
 const showMore = document.getElementById('show-more');
@@ -179,6 +211,23 @@ function showAccordeon() {
         loock.style.height = loock.scrollHeight + "px";
     }
 }
+
+// Логотипы в секции Инструменты
+const logos = document.querySelectorAll('.instruments-list__logo');
+const delay = 0.3;
+
+for (let i=0; i < logos.length; i++) {
+    setTimeout(() => {
+        logos[i].classList.add('transformNone');
+    }, i * 0.3);
+}
+
+// logos.forEach((item) => {
+//     setTimeout(() => {
+//         item.classList.add('transformNone');
+//     }),
+//     (i + 1) * delay
+// })
 });
 
 
