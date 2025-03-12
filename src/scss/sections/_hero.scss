@@ -58,11 +58,6 @@
         font-size: 14px;
     }
 
-    @media (max-width: 375px) {
-
-        margin-bottom: 346px;
-    }
-
 }
 
 .hero__discuss {
@@ -237,12 +232,17 @@
         }
 
         @media (max-width: 767px) {
-            width: 375px;
-            height: 375px;
+            width: 350px;
+            height: 354px;
+            transform: translateX(0);
         }
 
         img {
             transform: translate(15%, 44%);
+
+            @media (max-width: 767px) {
+                transform: translate(-17%, -8%);
+            }
         }
     }
 
@@ -314,6 +314,7 @@
 }
 
 .hero__ball {
+    border: 2px solid blue;
     position: absolute;
     width: 250px;
     height: 250px;
@@ -329,11 +330,16 @@
     }
 
     @media(max-width: 767px) {
-        right: 0;
+        top: -29px;
+        right: -5px;
+       width: 250px;
+       height: 250px;
+    //    top: 50px;
     }
 }
 
 .hero__ball img {
+    border: 2px solid purple;
     position: relative;
     width: 450px;
     height: 479px;
@@ -352,10 +358,12 @@
         height: remy(479);
     }
 
-    // @media(max-width: 767px) {
-    //     width: 265px;
-    //     height: 265px;
-    // }
+    @media(max-width: 767px) {
+        top: 0;
+        left: 49px;
+        width: 250px;
+        height: 250px;
+     }
 }
 
 .hero__puck {
@@ -376,9 +384,13 @@
         height: remy(260);
     }
 
-    // @media(max-width: 767px) {
-    //     width: 114px;
-    // }
+    @media(max-width: 767px) {
+        bottom: -34px;
+        left: -15px;
+        width: 150px;
+        height: 134px;
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes moveBall {

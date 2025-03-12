@@ -239,18 +239,11 @@
     justify-content: center;
     position: absolute;
     z-index: 3;
-    right: 22px;
-    bottom: 22px;
+    right: 20px;
+    bottom: 15px;
     cursor: pointer;
 
-    @media (max-width: 1599px) {
-        width: remy(30);
-        height: remy(30);
-        right: remy(22);
-        bottom: remy(22);
-    }
-
-    @media (max-width: 1599px) {
+    @media (max-width: 767px) {
         width: 10px;
         height: 10px;
         right: 12px;

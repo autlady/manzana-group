@@ -125,6 +125,23 @@ if (modalFrames.length > 0) {
     }
 };
 
+    /* fancybox */
+    Fancybox.bind("[data-fancybox]", {
+    Thumbs: false,
+    });
+
+    // animation
+    wow = new WOW(
+    {
+        boxClass: 'wow',      // default
+        animateClass: 'animate__animated', // default
+        offset: 0,          // default
+        mobile: true,       // default
+        live: true        // default
+    }
+    )
+    wow.init();
+
   //partners-slider
   $('.partners-slider').slick({
     infinite: true,
@@ -157,12 +174,11 @@ if (modalFrames.length > 0) {
   //interface-slider
 $('.interface-slider').slick({
     dots: false,
-    // slidesToShow: 2,
     prevArrow: '#interface-slider-prev',
     nextArrow: '#interface-slider-next',
     // slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     // responsive: [
     //   {
     //     breakpoint: 1068,
@@ -186,6 +202,39 @@ $('.interface-slider').slick({
     //     }
     //   }
     // ]
+});
+
+  //reviews-slider
+$('.reviews-slider').slick({
+    dots: false,
+    prevArrow: '#reviews-slider-prev',
+    nextArrow: '#reviews-slider-next',
+    slidesToShow: 2,
+    // slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
+    responsive: [
+    //   {
+    //     breakpoint: 1068,
+    //     settings: {
+
+    //       slidesToShow: 3,
+    //       arrows: false
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 1023,
+    //     settings: {
+    //       slidesToShow: 2
+    //     }
+    //   },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
 });
 
 const showMore = document.getElementById('show-more');
@@ -213,14 +262,14 @@ function showAccordeon() {
 }
 
 // Логотипы в секции Инструменты
-const logos = document.querySelectorAll('.instruments-list__logo');
-const delay = 0.3;
+// const logos = document.querySelectorAll('.instruments-list__logo');
+// const delay = 0.3;
 
-for (let i=0; i < logos.length; i++) {
-    setTimeout(() => {
-        logos[i].classList.add('transformNone');
-    }, i * 0.3);
-}
+// for (let i=0; i < logos.length; i++) {
+//     setTimeout(() => {
+//         logos[i].classList.add('transformNone');
+//     }, i * 0.3);
+// }
 
 // logos.forEach((item) => {
 //     setTimeout(() => {
