@@ -176,29 +176,15 @@ $('.interface-slider').slick({
     dots: false,
     prevArrow: '#interface-slider-prev',
     nextArrow: '#interface-slider-next',
+
     // slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     // responsive: [
     //   {
-    //     breakpoint: 1068,
-    //     settings: {
-
-    //       slidesToShow: 3,
-    //       arrows: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 1023,
+    //     breakpoint: 1600,
     //     settings: {
     //       slidesToShow: 2
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 575,
-    //     settings: {
-    //       centerMode: true,
-    //       slidesToShow: 1
     //     }
     //   }
     // ]

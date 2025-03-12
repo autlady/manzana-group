@@ -31,6 +31,7 @@
 }
 
 .interface-slider {
+    max-width: 1664px;
     width: calc(50% + 50vw);
 }
 
@@ -111,7 +112,8 @@
     .interface-slide.slick-slide {
         display: flex;
         height: auto;
-        margin-right: 15px;
+
+
     }
 
     .slick-list {
@@ -217,6 +219,14 @@
 .interface-card__img {
     height: 405px;
     box-shadow: 5px 4px 35px 0 rgba(0, 0, 0, 0.25);
+
+    img {
+        object-fit: cover;
+
+        @media (max-width: 767px) {
+            aspect-ratio: 335 / 238;
+        }
+    }
 
     @media (max-width: 1599px) {
         height: remy(405);
