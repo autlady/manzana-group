@@ -117,6 +117,8 @@ input:focus {
 textarea {
   outline: none;
   resize: none;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button {

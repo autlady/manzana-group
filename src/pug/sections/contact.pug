@@ -1,0 +1,32 @@
+// CONTACT
+section.contact
+    .container
+        .contact-wrapper
+            .contact__img
+                img(src="./img/contact-bg.webp" srcset="./img/contact-bg@2x.webp 2x" alt="background" width="1019" height="587")
+            // CONTACT TITLE
+            .contact__title
+                h2.title Начнем сотрудничество?
+            // CONTACT FORM
+            .contact-form-wrapper
+                form(class="form contact-form")
+                    input(type="hidden" name="form_name" value="Форма")
+                    .form-item.form-item-mb15
+                        input(class="form-input" type="text" name="name" placeholder="Имя")
+                    .form-item.form-item-mb15
+                        input(class="form-input" type="text" name="mail" placeholder="Email")
+                    .form-item.form-item-mb15
+                        input(class="form-input" type="text" name="tel" placeholder="Телефон")
+                    .form-item.form-item-mb15
+                        textarea(class="form-input form-input--textarea" type="text" name="message" placeholder="Расскажите о вашей задаче")
+                    .form-item.form-item-mb25
+                        label.checkbox
+                            input(type="checkbox" name="privacy" checked).real-checkbox
+                            span.custom-checkbox
+                            a(href="#!").call-form-privacy Согласен с политикой обработки данных
+                    .form-item.form-item-btn
+                        button(type="submit" class="submit-btn") Отправить запрос
+            //- .contact__decor
+            //-     img(src="./img/contact")
+            .contact__img-mob
+                img(src="./img/contact-bg-mob.webp" srcset="./img/contact-bg-mob@2x.webp 2x" alt="background" width="335" height="354")

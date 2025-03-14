@@ -1,0 +1,248 @@
+.contact {
+    padding-block: 56px;
+
+    @media (max-width: 1599px) {
+        padding-block: remy(56);
+    }
+}
+
+.contact-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 60px;
+    display: flex;
+    border: 7px solid #78be20;
+    border-radius: 30px;
+    background-color: #000;
+
+    @media (max-width: 1599px) {
+        padding: remy(39) remy(60);
+        border-radius: remy(30);
+    }
+
+    @media (max-width: 1023px) {
+        padding-bottom: 317px;
+        border-radius: 30px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+.contact__img {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+    width: 1019px;
+    height: 587px;
+
+    @media (max-width: 1599px) {
+        width: remy(1019);
+        height: remy(587);
+    }
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+}
+
+.contact__img-mob {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
+}
+
+.contact__title {
+    flex-shrink: 0;
+    width: 477px;
+
+    .title {
+        @media (max-width: 1023px) {
+            font-size: 30px;
+            line-height: 1.4;
+        }
+    }
+
+    @media (max-width: 1599px) {
+        width: remy(477);
+    }
+    @media (max-width: 1023px) {
+        width: 250px;
+    }
+
+    @media (max-width: 767px) {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.contact-form-wrapper {
+    flex-shrink: 0;
+    width: 655px;
+
+    .form-item-mb15 {
+        margin-bottom: 15px;
+
+        @media (max-width: 1599px) {
+            margin-bottom: remy(15);
+        }
+
+        @media (max-width: 1023px) {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 374px) {
+            margin-bottom: remy2(15);
+        }
+    }
+
+    .form-item-mb25 {
+        margin-bottom: 25px;
+
+        @media (max-width: 1599px) {
+            margin-bottom: remy(25);
+        }
+
+        @media (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 374px) {
+            margin-bottom: remy2(20);
+        }
+    }
+
+    @media (max-width: 1599px) {
+        width: remy(655);
+    }
+
+    @media (max-width: 1023px) {
+        width: 450px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.contact-form {
+    position: relative;
+    z-index: 2;
+    .form-input {
+        @media (max-width: 1023px) {
+            max-width: 450px;
+            font-size: 15px;
+            padding: 8px 10px;
+            height: 47px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .form-input.form-input--textarea {
+        height: 164px!important;
+
+        @media (max-width: 1599px) {
+            height: remy(164)!important;
+        }
+
+        @media (max-width: 1023px) {
+            height: 127px!important;
+        }
+
+        @media (max-width: 374px) {
+            height: remy2(127)!important;
+        }
+    }
+
+    .call-form-privacy {
+        position: relative;
+        line-height: 1.67;
+        color: var(--color-white);
+        text-decoration: none;
+
+        @media (max-width: 374px) {
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-white);
+
+            @media (max-width: 374px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1599px) {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 0.84;
+        }
+
+        @media (max-width: 374px) {
+            font-size: remy2(14);
+        }
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+    }
+
+    .real-checkbox:checked+.custom-checkbox {
+        background-color: transparent;
+        border: 1.5px solid #fff;
+    }
+
+    .custom-checkbox {
+        background-color: transparent;
+        border: 1.5px solid #fff;
+    }
+
+    .custom-checkbox::before {
+        background-image: url("./../img/icons/check-white.svg");
+    }
+
+    .real-checkbox:focus+.custom-checkbox {
+        background-color: transparent;
+        border: 1.5px solid #fff;
+    }
+
+    .form-item-btn {
+        .submit-btn {
+            width: 100%;
+            max-width: 100%;
+            font-weight: 700;
+            font-size: 23px;
+
+            @media (max-width: 1023px) {
+                height: 55px;
+                font-size: 18px;
+            }
+
+            @media (max-width: 374px) {
+                height: remy2(55);
+                font-size: remy2(18);
+            }
+        }
+    }
+}

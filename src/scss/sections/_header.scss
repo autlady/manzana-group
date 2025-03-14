@@ -82,6 +82,10 @@ header.mobile .header__inner .menu {
     line-height: 1.5;
     text-transform: capitalize;
 
+    a {
+        transition: 0.3s ease-in;
+    }
+
     a:hover, a:active {
         color: var(--color-grey);
     }

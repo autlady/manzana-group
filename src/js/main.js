@@ -170,6 +170,34 @@ if (modalFrames.length > 0) {
   $(window).on('load resize', function() {
     updateSlidesToShow();
 });
+  //line-slider
+  $('.line-slider').slick({
+    infinite: true,
+    draggable: false,
+    swipe: false,
+    speed: 5000, // Чем больше, тем медленнее движение
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0, // Бесшовный эффект
+    cssEase: 'linear', // Линейное движение
+    pauseOnHover: false, // Не останавливать при наведении
+    pauseOnFocus: false,
+    variableWidth: true,
+});
+
+  function updateSlidesToShow() {
+    let slider = $('.line-slider');
+    let sliderWidth = slider.width(); // Получаем ширину слайдера
+    let slideWidth = slider.find('.slick-slide').outerWidth(true); // Получаем ширину одного слайда
+    let slidesToShow = Math.floor(sliderWidth / slideWidth); // Рассчитываем количество
+    slider.slick('slickSetOption', 'slidesToShow', slidesToShow > 0 ? slidesToShow : 1, true);
+  }
+
+  $(window).on('load resize', function() {
+    updateSlidesToShow();
+});
 
   //interface-slider
 $('.interface-slider').slick({
@@ -196,24 +224,9 @@ $('.reviews-slider').slick({
     prevArrow: '#reviews-slider-prev',
     nextArrow: '#reviews-slider-next',
     slidesToShow: 2,
-    // slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
-    //   {
-    //     breakpoint: 1068,
-    //     settings: {
-
-    //       slidesToShow: 3,
-    //       arrows: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 1023,
-    //     settings: {
-    //       slidesToShow: 2
-    //     }
-    //   },
       {
         breakpoint: 575,
         settings: {

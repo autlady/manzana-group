@@ -17,6 +17,15 @@
 
     .section-title {
         text-align: center;
+
+        @media (max-width: 525px) {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 374px) {
+            max-width: 230px;
+        }
     }
 
     .reviews__img {
@@ -57,10 +66,22 @@
 
 
 .reviews-slider {
-
     margin-inline: -16px;
+
+    @media (max-width: 767px) {
+        margin-inline: -10px;
+    }
+
     .slick-list {
         padding-top: 103px;
+
+        @media (max-width: 1599px) {
+            padding-top: remy(103);
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 40px;
+        }
     }
 
     .slick-track {
@@ -74,17 +95,7 @@
     .reviews-slide.slick-slide {
         display: flex;
         height: auto;
-        // margin-right: 32px;
         margin-inline: 16px;
-    }
-
-    @media (max-width: 1599px) {
-        padding-top: remy(103);
-    }
-
-    @media (max-width: 767px) {
-        padding-top: 40px;
-        margin-right: 16px;
     }
 }
 
@@ -98,11 +109,11 @@
     .slider-prev#reviews-slider-prev {
         left: 30px;
 
-        @media (max-width: 767px) {
+        @media (max-width: 960px) {
             left: 0;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 767px) {
             left: -18px;
         }
     }
@@ -110,11 +121,11 @@
     .slider-next#reviews-slider-next {
         right: 30px;
 
-        @media (max-width: 767px) {
+        @media (max-width: 960px) {
             right: 0;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 767px) {
             right: -18px;
         }
     }
@@ -136,11 +147,27 @@
         border-radius: remy(20);
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
         padding: 55px 8px 17px 8px;
         max-width: 100%;
         min-height: 424px;
         border-radius: 20px;
+    }
+}
+
+.scroll-wrapper {
+    max-height: 516px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #C4C4C4 #F3F4F7;
+
+    @media (max-width: 1599px) {
+        max-height: remy(516);
+    }
+
+    @media (max-width: 1023px) {
+        max-height: 323px;
     }
 }
 
@@ -165,6 +192,7 @@
     }
 
     @media (max-width: 767px) {
+        top: 12px;
         width: 72px;
         height: 72px;
     }
