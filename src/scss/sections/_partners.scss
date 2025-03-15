@@ -1,9 +1,21 @@
 .partners {
-    padding-top: 200px;
-    padding-bottom: 60px;
-    background-color: var(--color-white);
-    border-radius: 10px;
+    margin-top: -2px;
+    background-color: var(--prime-color);
+}
 
+.partners-wrapper {
+    padding: 40px 100px 60px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+
+    @media (max-width: 1599px) {
+        padding-inline: remy(100);
+    }
+
+    @media (max-width: 767px) {
+        padding-block: 30px;
+        margin-inline: -20px;
+    }
 }
 
 .partners__title-wrapper {
@@ -44,6 +56,14 @@
 
     @media (max-width: 767px) {
         line-height: 1;
+    }
+  }
+
+  .partners-slider {
+    margin-inline: -100px;
+
+    @media (max-width: 1599px) {
+        margin-inline: remy(-100);
     }
   }
 

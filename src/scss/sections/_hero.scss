@@ -5,8 +5,6 @@
     padding-bottom: 38px;
     background-color: var(--prime-color);
 
-
-
     @media (max-width: 1599px) {
         padding-top: remy(200);
         padding-bottom: remy(38);
@@ -15,7 +13,7 @@
 
     @media (max-width: 767px) {
         padding-top: 125px;
-        padding-bottom: 350px;
+        padding-bottom: 0px;
     }
 
 
@@ -23,7 +21,6 @@
 
 .hero-content {
     position: relative;
-
 }
 
 .hero__title {
@@ -144,6 +141,13 @@
             width: 206px;
             height: 170px;
         }
+
+        @media(max-width: 374px) {
+            top: remy2(26);
+            left: remy2(62);
+            width: remy2(206);
+            height: remy2(170);
+        }
     }
 }
 
@@ -205,6 +209,11 @@
         width: 50px;
         height: 50px;
     }
+
+    @media (max-width: 374px) {
+        width: remy2(50);
+        height: remy2(50);
+    }
 }
 
 .hero__images {
@@ -237,6 +246,11 @@
             transform: translateX(0);
         }
 
+        @media (max-width: 374px) {
+            width: remy2(350);
+            height: remy2(354);
+        }
+
         img {
             transform: translate(15%, 44%);
 
@@ -259,6 +273,11 @@
         right: unset;
         bottom: unset;
         height: 345px;
+    }
+
+    @media (max-width: 374px) {
+        width: remy2(345);
+        height: remy2(345);
     }
  }
 
@@ -283,6 +302,11 @@
         left: -23%;
     }
 
+    @media (max-width: 374px) {
+        width: remy2(416);
+        height: remy2(403);
+    }
+
 
     img {
         height: 730px;
@@ -303,6 +327,10 @@
             position: relative;
             top: 67px;
         }
+
+        @media (max-width: 374px) {
+            top: remy2(67);
+        }
     }
 }
 
@@ -321,8 +349,12 @@
     overflow: hidden;
     top: 8%;
     right: -12%;
-
     z-index: 11;
+
+    animation: moveBall;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(250);
@@ -330,11 +362,21 @@
     }
 
     @media(max-width: 767px) {
+        animation: moveBallMob;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
         top: -29px;
         right: -5px;
        width: 250px;
        height: 250px;
-    //    top: 50px;
+    }
+
+    @media(max-width: 374px) {
+        top: remy2(-29);
+        right: remy2(-5);
+        width: remy2(250);
+        height: remy2(250);
     }
 }
 
@@ -348,10 +390,6 @@
     top: -65%;
     left: -46%;
 
-    // animation: moveBall;
-    // animation-duration: 0.5s;
-    // animation-delay: 1s;
-    // animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(450);
@@ -364,6 +402,12 @@
         width: 250px;
         height: 250px;
      }
+
+     @media(max-width: 374px) {
+        left: remy2(49);
+        width: remy2(250);
+        height: remy2(250);
+    }
 }
 
 .hero__puck {
@@ -374,10 +418,10 @@
     left: 10%;
     transform: translate(50%, 50%);
     z-index: 11;
-    // animation: movePuck;
-    // animation-duration: 0.5s;
-    // animation-delay: 1.8s;
-    // animation-fill-mode: forwards;
+    animation: movePuck;
+    animation-duration: 0.5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
 
     @media(max-width: 1599px) {
         width: remy(286);
@@ -390,6 +434,17 @@
         width: 150px;
         height: 134px;
         transform: translate(0, 0);
+        animation: movePuckMob;
+        animation-duration: 0.5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    }
+
+    @media(max-width: 374px) {
+        bottom: remy2(-34);
+        left: remy2(-15);
+        width: remy2(150);
+        height: remy2(134);
     }
 }
 
@@ -398,8 +453,7 @@
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-77%, 46%);
-        transform: translate(-74%, 60%);
+        transform: translate(-139%, 115%);
     }
 }
 
@@ -411,6 +465,28 @@
         transform: translate(124.8%, -15%);
     }
     100% {
-        transform: translate(2%, -45%);
+        transform: translate(34%, -34%);
+    }
+}
+
+
+@keyframes moveBallMob {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-52%, 64%);
+    }
+}
+
+@keyframes movePuckMob {
+    0% {
+        transform: translate(50%, 50%);
+    }
+    50% {
+        transform: translate(100%, -75%);
+    }
+    100% {
+        transform: translate(34%, -124%);
     }
 }

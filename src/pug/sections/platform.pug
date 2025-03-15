@@ -1,5 +1,5 @@
 // PLATFORM
-section.platfrom.none
+section.platfrom
     .container
         .platform-content
             .platform__logo
@@ -8,7 +8,12 @@ section.platfrom.none
             .platform__title
                 h2.title Интеллектуальная платформа лояльности
             h3.platform__subtitle Помогаем строить персональные отношения с миллионами клиентов
-            .platform__img
+            .platform__images
+                .platform__bg
+                    img(src="./img/platform/background.webp" srcset="./img/platform/background@2x.webp 2x" alt="background" width="906" height="563")
+                .platform__decor
+                    img(src="./img/platform/ellipse.svg" alt="decor" width="906" height="503")
+            .platform__img-mob
                 img(src="./img/platform/platform-bg.webp" srcset="./img/platform/platform-bg@2x.webp 2x" alt="background" width="906" height="563")
             .platform__btn
                 a(href="#!").btn-yellow Узнать больше

@@ -1,5 +1,5 @@
 // HEADER
-header.header.none
+header.header
    .container
       .header__inner
          // LOGO
@@ -10,11 +10,11 @@ header.header.none
             nav.nav
                ul.nav__list
                   li
-                     a(href="#!") Направления
+                     a(href="#services") Направления
                   li
                      a(href="#!") Экспертиза
                   li
-                     a(href="#!") Портфолио
+                     a(href="#portfolio") Портфолио
             // CONTACTS
             ul.header__contacts
                li
@@ -35,7 +35,7 @@ div(class="fade-block hidden" data-modal="modal-call-form" id="modal-call-form")
    .modal-window
       include ../blocks/call-form.pug
 // MODAL
-div(class="fade-block" data-modal="modal-call-form" id="modal-response")
+div(class="fade-block hidden" data-modal="modal-response" id="modal-response")
    .modal-window
       include ../blocks/response.pug
 

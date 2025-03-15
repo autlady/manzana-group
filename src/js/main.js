@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  setTimeout(function(){
+    $('#modal-call-form').removeClass('hidden');
+}, 3000);
+
   // Mobile menu
   const overlay = document.querySelector('.overlay');
   const burger = $('.menu-toggle');
@@ -204,18 +208,8 @@ $('.interface-slider').slick({
     dots: false,
     prevArrow: '#interface-slider-prev',
     nextArrow: '#interface-slider-next',
-
-    // slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    // responsive: [
-    //   {
-    //     breakpoint: 1600,
-    //     settings: {
-    //       slidesToShow: 2
-    //     }
-    //   }
-    // ]
 });
 
   //reviews-slider

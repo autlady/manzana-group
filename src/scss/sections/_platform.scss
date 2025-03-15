@@ -3,6 +3,10 @@
     padding-bottom: 75px;
     background-color: var(--prime-color);
 
+    @media (max-width: 1720px) {
+        overflow: hidden;
+   }
+
     @media (max-width: 1599px) {
         padding-top: remy(36);
         padding-bottom: remy(75);
@@ -14,13 +18,7 @@
 }
 
 .platform-content {
-    overflow: hidden;
     position: relative;
-    // background-image: url('../img/platform/platform-bg.webp');
-    // background-repeat: no-repeat;
-    // background-position: right;
-    // background-size: contain;
-
 
 }
 
@@ -40,6 +38,11 @@
         margin-bottom: 20px;
         width: 335px;
         height: 82px;
+    }
+
+    @media (max-width: 374px) {
+        width: 100%;
+        height: auto;
     }
 
     img {
@@ -88,43 +91,77 @@
 }
 
 .platform__btn {
-    // padding-bottom: 75px;
-
     @media (max-width: 767px) {
         display: flex;
         justify-content: center;
     }
 }
 
-.platform__img {
+.platform__images {
+    width: 906px;
+    height: 563px;
+    position: absolute;
+    right: -73px;
+    bottom: -76px;
+
+
+    .platform__bg {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .platform__decor {
+        position: absolute;
+        z-index: 1;
+        right: -86px;
+        bottom: -62px;
+        width: 900px;
+        height: 600px;
+
+        @media (max-width: 1599px) {
+            right: remy(-86);
+            bottom: remy(-62);
+            width: remy(900);
+            height: remy(600);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 1599px) {
+        width: remy(906);
+        height: remy(563);
+        right: remy(-73);
+        bottom: remy(-76);
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.platform__img-mob {
     display: none;
-    // position: absolute;
-    // right: -88px;
-    // bottom: -77px;
-    // width: 906px;
-    // height: 563px;
-    // overflow: hidden;
-
-    // img {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: contain;
-    // }
-
-    // @media (max-width: 1599px) {
-    //     right: remy(-88);
-    //     bottom: remy(-77);
-    //     width: remy(906);
-    //     height: remy(563);
-    // }
 
     @media (max-width: 767px) {
         display: block;
         width: 375px;
         margin: 0 auto;
-        // position: absolute;
-        // z-index: 1;
-        // bottom: 0;
-        // left: 0;
+    }
+
+    @media (max-width: 400px) {
+        width: 100%;
     }
 }
