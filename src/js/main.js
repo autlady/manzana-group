@@ -230,12 +230,28 @@ $('.reviews-slider').slick({
     ]
 });
 
+// CARDS IN PORTFOLIO
+
 const showMore = document.getElementById('show-more');
 const cardsRow = document.querySelector('.portfolio-box3');
+const hiddenCards = document.querySelectorAll('.card-mob-hidden');
+
 showMore.addEventListener('click', () => {
   cardsRow.classList.add('is-visible');
   showMore.style.display = 'none';
+  for (let card of hiddenCards) {
+    if (card.classList.contains('hidden')) {
+      card.classList.remove('hidden');
+    }
+}
 });
+
+if (window.matchMedia('(max-width: 525px)').matches) {
+  for (let card of hiddenCards) {
+    card.classList.add('hidden');
+}
+
+}
 
 // ACCORDEON IN CATALOG SECTION
 const accordeonTitle = document.querySelectorAll('[data-name="accordeon-title"]');
@@ -253,23 +269,6 @@ function showAccordeon() {
         loock.style.height = loock.scrollHeight + "px";
     }
 }
-
-// Логотипы в секции Инструменты
-// const logos = document.querySelectorAll('.instruments-list__logo');
-// const delay = 0.3;
-
-// for (let i=0; i < logos.length; i++) {
-//     setTimeout(() => {
-//         logos[i].classList.add('transformNone');
-//     }, i * 0.3);
-// }
-
-// logos.forEach((item) => {
-//     setTimeout(() => {
-//         item.classList.add('transformNone');
-//     }),
-//     (i + 1) * delay
-// })
 });
 
 

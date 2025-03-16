@@ -15,8 +15,6 @@
         padding-top: 125px;
         padding-bottom: 0px;
     }
-
-
 }
 
 .hero-content {
@@ -152,6 +150,7 @@
 }
 
 .button-overlay {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -217,7 +216,6 @@
 }
 
 .hero__images {
-    border: 5px solid red;
     width: 755px;
     height: 550px;
     position: absolute;
@@ -225,7 +223,6 @@
     bottom: -38px;
 
     .hero__decor {
-        border: 5px solid yellow;
         overflow: hidden;
         position: absolute;
         bottom: 0px;
@@ -342,7 +339,6 @@
 }
 
 .hero__ball {
-    border: 2px solid blue;
     position: absolute;
     width: 250px;
     height: 250px;
@@ -381,7 +377,6 @@
 }
 
 .hero__ball img {
-    border: 2px solid purple;
     position: relative;
     width: 450px;
     height: 479px;
@@ -481,7 +476,7 @@
 
 @keyframes movePuckMob {
     0% {
-        transform: translate(50%, 50%);
+        transform: translate(0%, 0%);
     }
     50% {
         transform: translate(100%, -75%);

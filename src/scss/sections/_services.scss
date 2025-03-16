@@ -70,6 +70,12 @@
     }
 }
 
+.service-card:nth-child(2) {
+    .service-card__title, .service-card__link, .svg-web {
+        transition: color 0.3s ease-in;
+    }
+}
+
 .service-card:first-child::before {
     position: absolute;
     content: "";
